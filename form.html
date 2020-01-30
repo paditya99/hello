@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Form Page</title>
+</head>
+<body>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<div class="container">
+    <h1 class="text-center">Registration Form</h1>
+    <div class="alert" id="msg"></div>
+<form id="regform">
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input type="text" id="Password">
+      
+    </div>
+    
+    <button type="submit" class="btn btn-primary" onclick="register()">Submit</button>
+    <div class="output"></div>
+  </form>
+</div>
+<script>
+   $(document).ready(function(){
+        $('#regform input').keydown(function(){
+            $('.output').text('You are typing...');
+            $(this).keyup(function(){
+              $('.output').text('');  
+            });
+        });
+   });
+
+
+</script>
+<script>
+   function register(){
+        var name=document.getElementById('name').value;
+        var email=document.getElementById('email').value;
+        var pass=document.getElementById('Password').value;
+        
+   }
+   document.getElementById('regform').innerHTML=register(e);
+</script>
+</body>
+</html>
